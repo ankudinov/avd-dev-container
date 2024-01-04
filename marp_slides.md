@@ -39,7 +39,7 @@ style: |
     }
 ---
 
-# AVD Dev Containers Preview
+# The 3 AVD Containers Problem
 
 <!-- Do not add page number on this slide -->
 <!--
