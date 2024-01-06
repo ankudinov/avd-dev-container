@@ -51,6 +51,6 @@ Petr Ankudinov
                                       Jan 2024
 ```
 
-[![By Canagrisa - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=133294338 bg right:65%](img/5_4_800_36_downscaled.gif)](https://commons.wikimedia.org/w/index.php?curid=133294338)
+![bg right:65%](img/5_4_800_36_downscaled.gif)(https://commons.wikimedia.org/w/index.php?curid=133294338)
 
 ---
