@@ -15,7 +15,8 @@
                 "style",
                 "br",
                 "sup",
-                "mark"
+                "mark",
+                "u"
             ]
         }
     },

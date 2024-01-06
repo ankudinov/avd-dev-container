@@ -47,6 +47,7 @@ _paginate: false
 -->
 
 ```text
+Three Containers - Endless Possibilities
 Petr Ankudinov
                                       Jan 2024
 ```
@@ -74,4 +75,29 @@ Petr Ankudinov
 
 - [Ansible Automation Platform](https://www.redhat.com/en/technologies/management/ansible)
 
-  - Is a different story and customers using it have RedHat support
+  - Out of scope. For customers heavily relying on RedHat support and internal Ansible ecosystem
+
+---
+
+# AVD Dev Containers
+
+<style scoped>section {font-size: 24px;}</style>
+
+```text
+python:3.{9-11}-slim-bullseye
+│
+│               <--- trigger CI on every AVD release, pre-release, merge
+│
+└> base         :python3.{9-11}, latest
+   │
+   ├> dev       :python{9-11}, latest
+   └> universal :python3.{9-11}-avd-devel, python3.{9-11}-avd-v4.5.0, latest
+```
+
+- Common use cases:
+
+  - `base` - not to be used directly, base for all other images
+  - `dev` - AVD contributors and testing new features/branches. AVD collection is not pre-installed
+  - `universal` - AVD collection is pre-installed, ready to use
+
+- All containers are <u>multi-platform</u> - linux/arm64, linux/amd64
