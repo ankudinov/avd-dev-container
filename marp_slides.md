@@ -137,7 +137,9 @@ Run:
 
 ```bash
 devcontainer up --workspace-folder /Users/pa/Documents/VSCode/github/avd-dev-container-toi/demo-01
-devcontainer exec --workspace-folder /Users/pa/Documents/VSCode/github/avd-dev-container-toi/demo-01 ansible --version; ansible-galaxy collection list
+devcontainer exec --workspace-folder /Users/pa/Documents/VSCode/github/avd-dev-container-toi/demo-01 ansible --version
+devcontainer exec --workspace-folder /Users/pa/Documents/VSCode/github/avd-dev-container-toi/demo-01 ansible-galaxy collection list
+devcontainer open /Users/pa/Documents/VSCode/github/avd-dev-container-toi/demo-01
 ```
 
 </div>

@@ -109,6 +109,10 @@ clab-*
 # ignore cv onboarding token
 clab/cv-onboarding-token
 
-# ingnore images and other files not to be uploaded to GitHub
+# ignore images and other files not to be uploaded to GitHub
 .gitignored/*
 !.gitignored/.gitkeep
+
+# ignore files generated during the demo
+demo-*/intended
+demo-*/documentation
