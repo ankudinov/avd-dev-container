@@ -79,6 +79,17 @@ Petr Ankudinov
 
 ---
 
+# Motivation
+
+- Better integration with AVD with automated image build on every release
+- Must be [documented](https://avd.sh/en/stable/docs/containers/overview.html) and known to AVD users
+- Reuse work done by Microsoft. It's not perfect for every use case, but quite a few developers are working on dev container features. Their contribution is appreciated and must not be wasted
+- Better VSCode integration
+
+> **WARNING**: AVD dev containers are in the preview phase. They are working well, but breaking changes can happen and they must not be advertised to customers as fully supported solution.
+
+---
+
 # AVD Dev Containers
 
 <style scoped>section {font-size: 24px;}</style>
