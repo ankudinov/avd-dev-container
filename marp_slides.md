@@ -112,3 +112,28 @@ python:3.{9-11}-slim-bullseye
   - `universal` - AVD collection is pre-installed, ready to use
 
 - All containers are <u>multi-platform</u> - linux/arm64, linux/amd64
+
+---
+
+# Demo 1: Universal Basic Use Case
+
+<style scoped>section {font-size: 22px;}</style>
+
+<div class="columns">
+<div>
+
+Add following `.devcontainer/devcontainer.json` to your inventory:
+
+```json
+{
+    "image": "ghcr.io/aristanetworks/ansible-avd/universal:python3.11-avd-v4.5.0"
+}
+```
+
+</div>
+<div>
+
+.
+
+</div>
+</div>
