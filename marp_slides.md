@@ -133,7 +133,12 @@ Add following `.devcontainer/devcontainer.json` to your inventory:
 </div>
 <div>
 
-.
+Run:
+
+```bash
+devcontainer up --workspace-folder /Users/pa/Documents/VSCode/github/avd-dev-container-toi/demo-01
+devcontainer exec --workspace-folder /Users/pa/Documents/VSCode/github/avd-dev-container-toi/demo-01 ansible --version
+```
 
 </div>
 </div>
