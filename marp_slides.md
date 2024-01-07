@@ -157,19 +157,31 @@ python:3.{9-11}-slim-bullseye
 
 ---
 
-# abc
+# Demo 03: Installing AVD Collection From Any Branch
 
-<style scoped>section {font-size: 22px;}</style>
+<style scoped>section {font-size: 18px;}</style>
 
-<div class="columns">
-<div>
+- The `entrypoint.sh` script provide with AVD container can install collections automatically when container is created
 
-.
+  - If `AVD_GITHUB_REPO` and `AVD_BRANCH_NAME` env variables are defined, AVD collection will be installed from the specified Github repository
+  - If env variables are not defined, AVD collection will be installed from the mounted repository (contributor mode)
 
-</div>
-<div>
+- VSCode overrides container entrypoint. If `"onCreateCommand": "/bin/entrypoint.sh true"` is not defined - the container will start without any AVD installation
 
-.
+- An updated `devcontainer.json` example
+  
+  ```json
+  {
+      "image": "ghcr.io/aristanetworks/ansible-avd/dev:python3.11",
+      "containerEnv": {
+          "AVD_GITHUB_REPO": "aristanetworks/ansible-avd",
+          "AVD_BRANCH_NAME": "devel"
+      },
+      // Run entrypoint script manually as it's ignored by dev container CLI otherwise.
+      // The dev entrypoint is used to install ansible collections and requirements, as they are not included with the dev version.
+      // "true" is required to exit "onCreateCommand" without entering ZSH.
+      "onCreateCommand": "/bin/entrypoint.sh true"
+  }
+  ```
 
-</div>
-</div>
+- In a real case scenario that will be someones fork and a different branch, as there is a pre-build `universal` image for AVD devel branch. It's only used for this demo as it's guaranteed to exist.
