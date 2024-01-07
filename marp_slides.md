@@ -138,13 +138,26 @@ python:3.{9-11}-slim-bullseye
 
 # Demo 02: Fixing Deprecation Warnings
 
+<style scoped>section {font-size: 22px;}</style>
+
 - Install `passlib` inside the container:
 
   ```json
   {
     "image": "ghcr.io/aristanetworks/ansible-avd/universal:python3.11-avd-v4.5.0",
     // fixing deprecation warnings
-    "onCreateCommand": "pip3 install passlib"
+    "onCreateCommand": "pip3 install passlib",
+    // you can also add some VSCode extensions
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                // excalidraw, drawio and tldraw
+                "pomdtr.excalidraw-editor",
+                "hediet.vscode-drawio",
+                "tldraw-org.tldraw-vscode"
+            ]
+        }
+    }
   }
   ```
 
@@ -152,7 +165,52 @@ python:3.{9-11}-slim-bullseye
 
 ---
 
-# Demo 03: Installing AVD Collection From Any Branch
+# Demo 03: Advanced Customization With Dockerfile
+
+<style scoped>section {font-size: 18px;}</style>
+
+- You can define your own Dockerfile to customize the container
+
+  ```json
+  {
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "_AR_FILE_PATH": "/support/download/EOS-USA/Active Releases/4.30/EOS-4.30.3M/cEOS-lab/cEOS-lab-4.30.3M.tar.xz",
+            "_ARTOKEN": "${localEnv:ARTOKEN}"
+        }
+    },
+    "onCreateCommand": "docker import /home/vscode/tmp/ceos-lab-temp ceos-lab:latest; rm -rf /home/vscode/tmp/"
+  }
+  ```
+
+  ```dockerfile
+  FROM ghcr.io/aristanetworks/ansible-avd/universal:python3.11-avd-v4.5.0
+
+  ARG _ARTOKEN
+  ARG _AR_FILE_PATH
+
+  RUN bash -c "$(curl -sL https://get.containerlab.dev)"; \
+    pip3 install passlib cookiecutter; \
+    sudo apt-get update; sudo apt-get -y install xz-utils
+
+  # add ceos-lab image is _ARTOKEN is not empty
+  RUN if [ ! -z ${_ARTOKEN} ]; \
+      then \
+      ARTOKEN=$(echo -n "${_ARTOKEN}" | base64) \
+      && ARSESSION=$(curl -X "POST" "https://www.arista.com/custom_data/api/cvp/getSessionCode/" -H 'Content-Type: application/json'   -d "{\"accessToken\": \"$ARTOKEN\"}" | sed -n 's|.*"session_code":"\([^"]*\)".*|\1|p') \
+      && FILE_PATH=${_AR_FILE_PATH} \
+      && DOWNLOAD_URL=$(curl -X "POST" "https://www.arista.com/custom_data/api/cvp/getDownloadLink/" -H 'Content-Type: application/json' -d "{\"sessionCode\": \"$ARSESSION\", \"filePath\": \"$FILE_PATH\"}" | sed -n 's|.*"url":"\([^"]*\)".*|\1|p') \
+      && mkdir -p /home/vscode/tmp \
+      && curl "$DOWNLOAD_URL" --output /home/vscode/tmp/ceos-lab-temp \
+      ; fi
+  ```
+
+- This is usually helpful for advanced use cases, like installing cLab with images, etc.
+
+---
+
+# Demo 04: Installing AVD Collection From Any Branch
 
 <style scoped>section {font-size: 18px;}</style>
 
@@ -193,6 +251,7 @@ python:3.{9-11}-slim-bullseye
 - Integrating with Github Codespaces for 1-click PR review
 - Reviewing dev workflow and updating shortcuts to match container setup
 - Testing and supporting standalone container use (with dev container supporting tools)
+- Security scanning
 - This TOI will be converted to a workshop and moved to [Netdevops Community](https://github.com/arista-netdevops-community) over time to support [AVD docs](https://avd.sh/en/stable/docs/containers/overview.html)
 
 > So far there is a single contributor for AVD containers. Help of any kind is very welcome!
