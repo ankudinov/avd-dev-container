@@ -115,7 +115,7 @@ python:3.{9-11}-slim-bullseye
 
 ---
 
-# Demo 1: Universal Basic Use Case
+# Demo 01: Universal Basic Use Case
 
 <style scoped>section {font-size: 22px;}</style>
 
@@ -138,6 +138,22 @@ python:3.{9-11}-slim-bullseye
 
 - The commands above are replaced with `make demo={demo-number}`
 - Ready to go. Build some configs using AVD, etc.
+
+---
+
+# Demo 02: Fixing Deprecation Warnings
+
+- Install `passlib` inside the container:
+
+  ```json
+  {
+    "image": "ghcr.io/aristanetworks/ansible-avd/universal:python3.11-avd-v4.5.0",
+    // fixing deprecation warnings
+    "onCreateCommand": "pip3 install passlib"
+  }
+  ```
+
+- Check [dev container metadata reference](https://containers.dev/implementors/json_reference/) for more customization options
 
 ---
 
