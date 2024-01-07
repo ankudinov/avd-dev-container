@@ -6,5 +6,5 @@
             "_ARTOKEN": "${localEnv:ARTOKEN}"
         }
     },
-    "onCreateCommand": "docker import /home/vscode/tmp/ceos-lab-temp ceos-lab:latest; rm -rf /home/vscode/tmp/"
+    "onCreateCommand": "docker import /home/avd/tmp/ceos-lab-temp ceos-lab:latest; rm -rf /home/avd/tmp/"
 }
