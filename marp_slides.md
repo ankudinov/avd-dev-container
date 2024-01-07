@@ -180,7 +180,7 @@ python:3.{9-11}-slim-bullseye
       // Run entrypoint script manually as it's ignored by dev container CLI otherwise.
       // The dev entrypoint is used to install ansible collections and requirements, as they are not included with the dev version.
       // "true" is required to exit "onCreateCommand" without entering ZSH.
-      "onCreateCommand": "/bin/entrypoint.sh true"
+      "onCreateCommand": "pip3 install passlib; /bin/entrypoint.sh true"
   }
   ```
 
