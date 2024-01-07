@@ -193,6 +193,7 @@ python:3.{9-11}-slim-bullseye
 - Integrating with Github Codespaces for 1-click PR review
 - Reviewing dev workflow and updating shortcuts to match container setup
 - Testing and supporting standalone container use (with dev container supporting tools)
+- This TOI will be converted to a workshop and moved to [Netdevops Community](https://github.com/arista-netdevops-community) over time to support [AVD docs](https://avd.sh/en/stable/docs/containers/overview.html)
 
 > So far there is a single contributor for AVD containers. Help of any kind is very welcome!
 
