@@ -1,6 +1,9 @@
-# avd-dev-container-toi
+# AVD Dev Container TOI
 
-Slides: https://ankudinov.github.io/avd-dev-container-toi/
+To access the slides, please use the following links:
+
+- [Web Slides](https://ankudinov.github.io/avd-dev-container-toi/)
+- [PDF Slides](https://github.com/ankudinov/avd-dev-container-toi/blob/gh-pages/avd_extended_workshop.pdf)
 
 Credits:
 
