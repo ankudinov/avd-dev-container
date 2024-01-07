@@ -119,28 +119,41 @@ python:3.{9-11}-slim-bullseye
 
 <style scoped>section {font-size: 22px;}</style>
 
+- Add following `.devcontainer/devcontainer.json` to your inventory:
+
+  ```json
+  {
+      "image": "ghcr.io/aristanetworks/ansible-avd/universal:python3.11-avd-v4.5.0"
+  }
+  ```
+
+- Use VSCode to open your inventory or another tool supporting dev containers. For ex., devcontainer CLI:
+
+  ```bash
+  devcontainer up --workspace-folder /Users/pa/Documents/VSCode/github/avd-dev-container-toi/demo-01
+  devcontainer exec --workspace-folder /Users/pa/Documents/VSCode/github/avd-dev-container-toi/demo-01 ansible --version
+  devcontainer exec --workspace-folder /Users/pa/Documents/VSCode/github/avd-dev-container-toi/demo-01 ansible-galaxy collection list
+  devcontainer open /Users/pa/Documents/VSCode/github/avd-dev-container-toi/demo-01
+  ```
+
+- The commands above are replaced with `make demo={demo-number}`
+- Ready to go. Build some configs using AVD, etc.
+
+---
+
+# abc
+
+<style scoped>section {font-size: 22px;}</style>
+
 <div class="columns">
 <div>
 
-Add following `.devcontainer/devcontainer.json` to your inventory:
-
-```json
-{
-    "image": "ghcr.io/aristanetworks/ansible-avd/universal:python3.11-avd-v4.5.0"
-}
-```
+.
 
 </div>
 <div>
 
-Run:
-
-```bash
-devcontainer up --workspace-folder /Users/pa/Documents/VSCode/github/avd-dev-container-toi/demo-01
-devcontainer exec --workspace-folder /Users/pa/Documents/VSCode/github/avd-dev-container-toi/demo-01 ansible --version
-devcontainer exec --workspace-folder /Users/pa/Documents/VSCode/github/avd-dev-container-toi/demo-01 ansible-galaxy collection list
-devcontainer open /Users/pa/Documents/VSCode/github/avd-dev-container-toi/demo-01
-```
+.
 
 </div>
 </div>
