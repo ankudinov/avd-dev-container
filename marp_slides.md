@@ -180,3 +180,24 @@ python:3.{9-11}-slim-bullseye
   ```
 
 - In a real case scenario that will be someones fork and a different branch, as there is a pre-build `universal` image for AVD devel branch. It's only used for this demo as it's guaranteed to exist.
+
+---
+
+# Roadmap
+
+<style scoped>section {font-size: 22px;}</style>
+
+![bg left opacity:.7](img/new-containers-produced-by-pipeline.jpeg)
+
+- Testing and bugfixes
+- Integrating with Github Codespaces for 1-click PR review
+- Reviewing dev workflow and updating shortcuts to match container setup
+- Testing and supporting standalone container use (with dev container supporting tools)
+
+> So far there is a single contributor for AVD containers. Help of any kind is very welcome!
+
+---
+
+# Questions?
+
+![bg right:65%](img/5_4_800_36_downscaled.gif)
