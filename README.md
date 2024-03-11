@@ -17,4 +17,5 @@ Credits:
 - [Ansible](https://www.ansible.com) - Automation for everyone
 
 Demos:
-- [![Open Demo01 in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ankudinov/avd-dev-container-toi/tree/master/demo-01)
+- Demo 01  
+  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ankudinov/avd-dev-container-toi/tree/master/demo-01)
