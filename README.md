@@ -15,3 +15,6 @@ Credits:
 - [Github Pages](https://pages.github.com/) - publish slides
 - [Arista AVD Ansible Collection](https://avd.arista.com/4.3/index.html)
 - [Ansible](https://www.ansible.com) - Automation for everyone
+
+Demos:
+- [![Open Demo01 in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ankudinov/avd-dev-container-toi/tree/master/demo-01)
