@@ -18,4 +18,4 @@ Credits:
 
 Demos:
 - Demo 01  
-  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ankudinov/avd-dev-container-toi/tree/master/demo-01)
+  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ankudinov/test-multi-devcontainers?quickstart=1&devcontainer_path=demo-01%2F.devcontainer%2Fdevcontainer.json)
