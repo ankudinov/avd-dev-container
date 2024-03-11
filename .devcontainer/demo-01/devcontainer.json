@@ -1,4 +1,6 @@
 {
     "name": "demo-01",
-    "image": "ghcr.io/aristanetworks/ansible-avd/universal:python3.11-avd-v4.5.0"
+    "image": "ghcr.io/aristanetworks/ansible-avd/universal:python3.11-avd-v4.5.0",
+    "workspaceMount": "source=${localWorkspaceFolder}/demo-01,target=/workspace,type=bind",
+    "workspaceFolder": "/workspace"
 }

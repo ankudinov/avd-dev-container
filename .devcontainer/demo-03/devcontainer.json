@@ -7,5 +7,7 @@
             "_ARTOKEN": "${localEnv:ARTOKEN}"
         }
     },
-    "onCreateCommand": "docker import /home/avd/tmp/ceos-lab-temp ceos-lab:latest; rm -rf /home/avd/tmp/"
+    "onCreateCommand": "docker import /home/avd/tmp/ceos-lab-temp ceos-lab:latest; rm -rf /home/avd/tmp/",
+    "workspaceMount": "source=${localWorkspaceFolder}/demo-03,target=/workspace,type=bind",
+    "workspaceFolder": "/workspace"
 }
