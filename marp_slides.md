@@ -133,6 +133,8 @@ python:3.{9-11}-slim-bullseye
 
 - The commands above are replaced with `make demo={demo-number}`
 - Ready to go. Build some configs using AVD, etc.
+- Start demo 🚀  
+  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ankudinov/test-multi-devcontainers?quickstart=1&devcontainer_path=demo-01%2F.devcontainer%2Fdevcontainer.json)
 
 ---
 
@@ -162,6 +164,8 @@ python:3.{9-11}-slim-bullseye
   ```
 
 - Check [dev container metadata reference](https://containers.dev/implementors/json_reference/) for more customization options
+- Start demo 🚀  
+  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ankudinov/test-multi-devcontainers?quickstart=1&devcontainer_path=demo-02%2F.devcontainer%2Fdevcontainer.json)
 
 ---
 
@@ -207,6 +211,8 @@ python:3.{9-11}-slim-bullseye
   ```
 
 - This is usually helpful for advanced use cases, like installing cLab with images, etc.
+- Start demo 🚀  
+  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ankudinov/test-multi-devcontainers?quickstart=1&devcontainer_path=demo-03%2F.devcontainer%2Fdevcontainer.json)
 
 ---
 
@@ -238,6 +244,8 @@ python:3.{9-11}-slim-bullseye
   ```
 
 - In a real case scenario that will be someones fork and a different branch, as there is a pre-build `universal` image for AVD devel branch. It's only used for this demo as it's guaranteed to exist.
+- Start demo 🚀  
+  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ankudinov/test-multi-devcontainers?quickstart=1&devcontainer_path=demo-04%2F.devcontainer%2Fdevcontainer.json)
 
 ---
 
