@@ -1,4 +1,5 @@
 {
+    "name": "demo-02",
     "image": "ghcr.io/aristanetworks/ansible-avd/universal:python3.11-avd-v4.5.0",
     // fixing deprecation warnings
     "onCreateCommand": "pip3 install passlib"
